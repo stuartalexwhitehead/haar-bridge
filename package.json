@@ -1,0 +1,41 @@
+{
+  "name": "haar-bridge",
+  "version": "0.0.0",
+  "description": "Haar Bridge facilitates the connection between Haar API and ZigBee devices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "node_modules/eslint/bin/eslint.js --ext .jsx,.js $(git status --porcelain -uno | egrep '.js(x)?$' | egrep '^M|^A' | sed 's/^.* //g' | tr '\n' ' ')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuartalexwhitehead/haar-bridge.git"
+  },
+  "author": "Stuart Whitehead",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stuartalexwhitehead/haar-bridge/issues"
+  },
+  "homepage": "https://github.com/stuartalexwhitehead/haar-bridge#readme",
+  "dependencies": {
+    "axios": "^0.9.1",
+    "dotenv": "^2.0.0",
+    "engine.io": "^1.6.8",
+    "engine.io-client": "^1.6.8",
+    "nconf": "^0.8.4",
+    "primus": "^5.0.0",
+    "primus-responder": "^1.0.4",
+    "primus-rooms": "^3.4.0",
+    "serialport": "^2.0.6",
+    "xbee-api": "^0.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0",
+    "pre-commit": "^1.1.2"
+  },
+  "pre-commit": [
+    "eslint"
+  ]
+}
